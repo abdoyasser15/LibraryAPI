@@ -1,0 +1,3 @@
+wwwroot\images\Books\6607720.jpg
+wwwroot\images\Books\81IGFC6oFmL._UF1000,1000_QL80_.jpg
+wwwroot\images\Books\Skeet-4ED-HI.png

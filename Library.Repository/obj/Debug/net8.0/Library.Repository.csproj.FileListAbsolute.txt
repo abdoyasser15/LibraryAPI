@@ -1,0 +1,15 @@
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\bin\Debug\net8.0\Library.Repository.deps.json
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\bin\Debug\net8.0\Library.Repository.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\bin\Debug\net8.0\Library.Repository.pdb
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\bin\Debug\net8.0\Library.Core.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\bin\Debug\net8.0\Library.Core.pdb
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\obj\Debug\net8.0\Library.Repository.csproj.AssemblyReference.cache
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\obj\Debug\net8.0\Library.Repository.GeneratedMSBuildEditorConfig.editorconfig
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\obj\Debug\net8.0\Library.Repository.AssemblyInfoInputs.cache
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\obj\Debug\net8.0\Library.Repository.AssemblyInfo.cs
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\obj\Debug\net8.0\Library.Repository.csproj.CoreCompileInputs.cache
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\obj\Debug\net8.0\Library..E6D8A4A7.Up2Date
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\obj\Debug\net8.0\Library.Repository.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\obj\Debug\net8.0\refint\Library.Repository.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\obj\Debug\net8.0\Library.Repository.pdb
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Repository\obj\Debug\net8.0\ref\Library.Repository.dll

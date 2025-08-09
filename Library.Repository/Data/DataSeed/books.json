@@ -1,0 +1,22 @@
+[
+  {
+    "Title": "C# in Depth",
+    "Author": "Jon Skeet",
+    "ISBN": "9781617294532",
+    "TotalCopies": 10,
+    "AvalibleCopies": 8,
+    "CoverImageUrl": "images/Books/Skeet-4ED-HI.png",
+    "Description": "Deep dive into C#.",
+    "CategoryId": 3
+  },
+  {
+    "Title": "Clean Code",
+    "Author": "Robert C. Martin",
+    "ISBN": "9780132350884",
+    "TotalCopies": 7,
+    "AvalibleCopies": 6,
+    "CoverImageUrl": "images/Books/6607720.jpg",
+    "Description": "A handbook of agile software craftsmanship.",
+    "CategoryId": 4
+  }
+]
