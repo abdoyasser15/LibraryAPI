@@ -121,8 +121,10 @@ It provides features to manage books, users, borrowings, categories, fines, rati
 - **ASP.NET Core Web API**
 - **Entity Framework Core**
 - **SQL Server**
-- **Swagger / Swashbuckle**
+- **Swagger**
 - **JWT Authentication**
+- **LINQ**
+- **Design Patterns**
 
 ---
 
