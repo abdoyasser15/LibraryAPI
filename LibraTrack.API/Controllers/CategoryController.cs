@@ -3,12 +3,14 @@ using Library.Core.Entities;
 using Library.Core.ServiceContract;
 using LibraTrack.API.DTOs;
 using LibraTrack.API.Errors;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibraTrack.API.Controllers
 {
+    [ApiExplorerSettings(GroupName = "public-v1")]
     public class CategoryController : BaseApiController
     {
         private readonly ICategoryService _categoryService;
@@ -37,6 +39,8 @@ namespace LibraTrack.API.Controllers
             var data = _mapper.Map<CategoryToReturnDto>(category);
             return Ok(data);
         }
+        [Authorize(Roles = "Admin")]
+        [ApiExplorerSettings(GroupName = "admin-v1")]
         [HttpPost]
         public async Task<ActionResult<CategoryToReturnDto>> AddCategory([FromBody] CreateCategoryDto createCategory)
         {
@@ -47,6 +51,8 @@ namespace LibraTrack.API.Controllers
             var data = _mapper.Map<CategoryToReturnDto>(existingCategory);
             return Ok(data);
         }
+        [Authorize(Roles = "Admin")]
+        [ApiExplorerSettings(GroupName = "admin-v1")]
         [HttpPatch("{id}")]
         public async Task<ActionResult<CategoryToReturnDto>> UpdateCategory(int id, [FromBody] JsonPatchDocument<UpdateCategoryDto> updateCategory)
         {
@@ -64,6 +70,8 @@ namespace LibraTrack.API.Controllers
             var result = _mapper.Map<CategoryToReturnDto>(category);
             return result;
         }
+        [Authorize(Roles = "Admin")]
+        [ApiExplorerSettings(GroupName = "admin-v1")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<CategoryToReturnDto>> DeleteCategory(int id)
         {

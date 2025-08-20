@@ -18,6 +18,7 @@ namespace LibraTrack.API.Controllers
             _notificationService = notificationService;
         }
         [Authorize(Roles ="Admin")]
+        [ApiExplorerSettings(GroupName = "admin-v1")]
         [HttpPost("sendNotification")]
         public async Task<ActionResult> SendNotificationAsync([FromBody] CreateNotificationDto model)
         {
@@ -28,6 +29,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound("User not found or notification could not be sent.");
             return Ok(new { Message = "Notification sent successfully." });
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [HttpGet("UserNotification")]
         public async Task<ActionResult> GetUserNotificationsAsync()
         {
@@ -37,6 +39,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound("No notifications found for the user.");
             return Ok(notifications);
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [HttpPut("{id}/MarkAsRead")]
         public async Task<ActionResult> MarkAsReadAsync(int id)
         {

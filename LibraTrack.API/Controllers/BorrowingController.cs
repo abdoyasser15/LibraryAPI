@@ -16,6 +16,7 @@ namespace LibraTrack.API.Controllers
         {
             _borrowingService = borrowingService;
         }
+        [ApiExplorerSettings(GroupName = "admin-v1")]
         [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<BorrowingDto>>> GetAllBorrowingsWithUserAsync()
@@ -25,6 +26,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, "No borrowings found."));
             return Ok(borrowings);
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [HttpGet("{id}")]
         public async Task<ActionResult<BorrowingDto>> GetBorrowingByIdAsync(int id)
         {
@@ -33,6 +35,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, "Borrowing not found."));
             return Ok(borrowing);
         }
+        [ApiExplorerSettings(GroupName = "admin-v1")]
         [Authorize(Roles ="Admin")]
         [HttpDelete]
         public async Task<ActionResult> DeleteBorrowingAsync(int id)
@@ -43,7 +46,7 @@ namespace LibraTrack.API.Controllers
             await _borrowingService.DeleteAsync(id);
             return Ok(new ApiResponse(200, "Borrowing deleted successfully."));
         }
-        [Authorize]
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [HttpPost]
         public async Task<ActionResult<BorrowingDto>> AddBorrowingAsync(CreateBorrowingDto borrowingDto)
         {
@@ -56,6 +59,7 @@ namespace LibraTrack.API.Controllers
             var borrowing = await _borrowingService.AddBorrowingAsync(borrowingDto);
             return CreatedAtAction(nameof(GetBorrowingByIdAsync), new { id = borrowing.Id }, borrowing);
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
         [Authorize(Roles = "Admin,Librarian")]
         [HttpPut("{id}")]
         public async Task<ActionResult<BorrowingDto>> UpdateBorrowingAsync(int id, UpdateBorrowingDto dto)
@@ -67,6 +71,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, "Borrowing not found."));
             return Ok(updatedBorrowing);
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [HttpGet("userBorrowings/{userId}")]
         public async Task<ActionResult<IReadOnlyList<BorrowingDto>>> GetBorrowingsByUserIdAsync(string userId)
         {
@@ -75,6 +80,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, "No borrowings found for this user."));
             return Ok(borrowings);
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
         [Authorize(Roles = "Admin,Librarian")]
         [HttpGet("Overdue")]
         public async Task<ActionResult<IReadOnlyList<BorrowingDto>>> GetOverdueBorrowingsAsync()
@@ -85,6 +91,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, "No overdue borrowings found."));
             return Ok(overdueBorrowings);
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [HttpGet("Active")]
         public async Task<ActionResult<IReadOnlyList<BorrowingDto>>> GetActiveBorrowingsAsync()
         {
@@ -94,6 +101,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, "No active borrowings found."));
             return Ok(activeBorrowings);
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [HttpPut("{id}/Return")]
         public async Task<ActionResult<BorrowingDto?>> ReturnBorrowingAsync(int id, DateTime ReturnDate)
         {

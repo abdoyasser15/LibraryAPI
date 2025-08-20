@@ -390,6 +390,32 @@
   },
   {
     "ContainingType": "LibraTrack.API.Controllers.BorrowingController",
+    "Method": "AddBorrowingAsync",
+    "RelativePath": "api/Borrowing",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "borrowingDto",
+        "Type": "Library.Core.Entities.Dtos.CreateBorrowingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Library.Core.Entities.Dtos.BorrowingDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LibraTrack.API.Controllers.BorrowingController",
     "Method": "GetAllBorrowingsWithUserAsync",
     "RelativePath": "api/Borrowing",
     "HttpMethod": "GET",
@@ -423,32 +449,6 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LibraTrack.API.Controllers.BorrowingController",
-    "Method": "AddBorrowingAsync",
-    "RelativePath": "api/Borrowing",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "borrowingDto",
-        "Type": "Library.Core.Entities.Dtos.CreateBorrowingDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Library.Core.Entities.Dtos.BorrowingDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   },
   {
     "ContainingType": "LibraTrack.API.Controllers.BorrowingController",
@@ -948,32 +948,6 @@
   },
   {
     "ContainingType": "LibraTrack.API.Controllers.RatingsController",
-    "Method": "GetRatingByIdAsync",
-    "RelativePath": "api/Ratings/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Library.Core.Entities.Dtos.RatingDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "LibraTrack.API.Controllers.RatingsController",
     "Method": "UpdateRatingAsync",
     "RelativePath": "api/Ratings/{id}",
     "HttpMethod": "PUT",
@@ -994,6 +968,32 @@
     "ReturnTypes": [
       {
         "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LibraTrack.API.Controllers.RatingsController",
+    "Method": "GetRatingByIdAsync",
+    "RelativePath": "api/Ratings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Library.Core.Entities.Dtos.RatingDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

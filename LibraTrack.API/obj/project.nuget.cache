@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UWontgbBE7k=",
+  "dgSpecHash": "lReL94iNEjo=",
   "success": true,
   "projectFilePath": "F:\\study\\backend\\Eng Ahmed Nasr\\08 ASP.NET Core Web APIs\\LibraTrack.API\\LibraTrack.API\\LibraTrack.API.csproj",
   "expectedPackageFiles": [
@@ -58,6 +58,8 @@
     "C:\\Users\\ABDO YASER\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\ABDO YASER\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ABDO YASER\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\ABDO YASER\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\ABDO YASER\\.nuget\\packages\\stackexchange.redis\\2.8.58\\stackexchange.redis.2.8.58.nupkg.sha512",
     "C:\\Users\\ABDO YASER\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\ABDO YASER\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\ABDO YASER\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",

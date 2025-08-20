@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace LibraTrack.API.Controllers
-{    [ApiController]
+{    
+    [ApiController]
     public class RatingsController : BaseApiController
     {
         private readonly IRatingsService _ratingsService;
@@ -16,6 +17,7 @@ namespace LibraTrack.API.Controllers
         {
             _ratingsService = ratingsService;
         }
+        [ApiExplorerSettings(GroupName = "admin-v1")]
         [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult<Ratings>> GetAllRatingsAsync()
@@ -25,6 +27,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, "No ratings found."));
             return Ok(ratings);
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
         [Authorize(Roles = "Admin,Member")]
         [HttpGet("{id}")]
         public async Task<ActionResult<RatingDto>> GetRatingByIdAsync(int id)
@@ -37,6 +40,7 @@ namespace LibraTrack.API.Controllers
                 return Forbid();
             return Ok(rating);
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [HttpGet("book/{bookId}")]
         public async Task<ActionResult<IReadOnlyList<RatingDto>>> GetRatingByBookId(int bookId)
         {
@@ -45,6 +49,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, "Rating for the specified book not found."));
             return Ok(rating);
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [Authorize(Roles = "Member")]
         [HttpPut("{id}")]
         public async Task<ActionResult<bool>> UpdateRatingAsync(int id, [FromBody] RatingDto rating)
@@ -63,6 +68,7 @@ namespace LibraTrack.API.Controllers
             
             return Ok(new ApiResponse(200,"Rating Updated Successfully"));
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
         [Authorize(Roles = "Member,Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> DeleteRatingAsync(int id)

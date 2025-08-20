@@ -22,6 +22,8 @@ namespace LibraTrack.API.Controllers
             _bookService = bookService;
             _mapper = mapper;
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
+        [Cashed]
         [HttpGet]
         public async Task<ActionResult<Pagination<BookToReturnDto>>> GetAllBooks([FromQuery] BookSpecificationParams specParam)
         {
@@ -32,6 +34,7 @@ namespace LibraTrack.API.Controllers
             var count = await _bookService.GetCountAsync(specParam);
             return Ok(new Pagination<BookToReturnDto>(specParam.PageIndex, specParam.PageSize, count, data));
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [HttpGet("{id}")]
         public async Task<ActionResult<BookToReturnDto>> GetBookById(int id)
         {
@@ -41,6 +44,7 @@ namespace LibraTrack.API.Controllers
             var data = _mapper.Map<BookToReturnDto>(book);
             return Ok(data);
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
         [Authorize(Roles = "Admin, Librarian")]
         [HttpPost]
         public async Task<ActionResult<BookToReturnDto>> AddBook([FromBody] CreateBookDto Book)
@@ -54,6 +58,7 @@ namespace LibraTrack.API.Controllers
             var data = _mapper.Map<BookToReturnDto>(existingBook);
             return Ok(data);
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
         [Authorize(Roles = "Admin, Librarian")]
         [HttpPut("{id}")]
         public async Task<ActionResult<BookToReturnDto>> UpdateBook(int id, [FromBody] UpdateBookDto updateDto)
@@ -67,6 +72,7 @@ namespace LibraTrack.API.Controllers
             var bookToReturn = _mapper.Map<BookToReturnDto>(updatedBook);
             return Ok(bookToReturn);
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
         [Authorize(Roles = "Admin, Librarian")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<BookToReturnDto>> DeleteBook(int id)
@@ -77,6 +83,7 @@ namespace LibraTrack.API.Controllers
             var bookToReturn = _mapper.Map<BookToReturnDto>(deletedBook);
             return Ok(bookToReturn);
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [HttpGet("TopRatedBooks")]
         public async Task<ActionResult<IReadOnlyList<BookRatingDto>>> GetTopRatedBooks()
         {

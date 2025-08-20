@@ -142,7 +142,6 @@ F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTra
 F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\obj\Debug\net8.0\staticwebassets.build.json.cache
 F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\obj\Debug\net8.0\staticwebassets.development.json
 F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\obj\Debug\net8.0\LibraTra.682F3126.Up2Date
 F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\obj\Debug\net8.0\LibraTrack.API.dll
 F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\obj\Debug\net8.0\refint\LibraTrack.API.dll
@@ -160,3 +159,6 @@ F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTra
 F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\bin\Debug\net8.0\Newtonsoft.Json.dll
 F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\LibraTrack.API\bin\Debug\net8.0\StackExchange.Redis.dll

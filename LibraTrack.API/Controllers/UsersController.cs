@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LibraTrack.API.Controllers
 {
+    [ApiExplorerSettings(GroupName = "admin-v1")]
     [Authorize(Roles = "Admin")]
     public class UsersController : BaseApiController
     {

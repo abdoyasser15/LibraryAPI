@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LibraTrack.API.Controllers
 {
-    [Authorize(Roles = "Admin")]
     public class FineController : BaseApiController
     {
         private readonly IFineService _fineService;
@@ -17,6 +16,8 @@ namespace LibraTrack.API.Controllers
         {
             _fineService = fineService;
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<FineDto>>> GetAllFinesAsync()
         {
@@ -26,6 +27,7 @@ namespace LibraTrack.API.Controllers
             return Ok(fines);
         }
         [Authorize(Roles = "Member,Admin")]
+        [ApiExplorerSettings(GroupName = "shared-v1")]
         [HttpGet("{id}")]
         public async Task<ActionResult<FineDto?>> GetFineByIdAsync(int id)
         {
@@ -34,7 +36,8 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, $"No Fine By Id {id}"));
             return Ok(fine);
         }
-        [Authorize(Roles = "Member,Admin")] 
+        [ApiExplorerSettings(GroupName = "shared-v1")]
+        [Authorize(Roles = "Member,Admin")]
         [HttpGet("borrowing/{id}")]
         public async Task<ActionResult<FineDto?>> GetFineByBorrowingId(int id)
         {
@@ -43,6 +46,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, $"No Fine By BorrowingId {id}"));
             return Ok(fine);
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
         [Authorize(Roles = "Member,Admin")]
         [HttpGet("User/{id}")]
         public async Task<ActionResult<FineDto?>> GetFinesByUserIdAsync(string id)
@@ -52,6 +56,8 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, $"No Fines By UserId {id}"));
             return Ok(fines);
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteFineById(int id)
         {
@@ -61,6 +67,8 @@ namespace LibraTrack.API.Controllers
             await _fineService.DeleteAsync(id);
             return Ok(fine);
         }
+        [ApiExplorerSettings(GroupName = "shared-v1")]
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateFineById(int id, UpdateFineDto updateFineDto)
         {
@@ -71,6 +79,7 @@ namespace LibraTrack.API.Controllers
                 return NotFound(new ApiResponse(404, "Fine Not Found"));
             return Ok(fine);
         }
+        [ApiExplorerSettings(GroupName = "public-v1")]
         [Authorize(Roles = "Member")]
         [HttpPost("{id}/pay")]
         public async Task<ActionResult> PayFineById(int id)

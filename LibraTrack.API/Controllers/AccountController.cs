@@ -15,6 +15,7 @@ using System.Security.Claims;
 
 namespace LibraTrack.API.Controllers
 {
+    [ApiExplorerSettings(GroupName = "account-v1")]
     public class AccountController : BaseApiController
     {
         private readonly IAuthService _authService;
@@ -89,6 +90,7 @@ namespace LibraTrack.API.Controllers
                 }
                 );
         }
+        [Authorize]
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout([FromBody] LogoutDto model)
         {

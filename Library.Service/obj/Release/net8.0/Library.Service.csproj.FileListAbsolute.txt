@@ -1,0 +1,17 @@
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\bin\Release\net8.0\Library.Service.deps.json
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\bin\Release\net8.0\Library.Service.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\bin\Release\net8.0\Library.Service.pdb
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\bin\Release\net8.0\Library.Core.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\bin\Release\net8.0\Library.Repository.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\bin\Release\net8.0\Library.Core.pdb
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\bin\Release\net8.0\Library.Repository.pdb
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\obj\Release\net8.0\Library.Service.csproj.AssemblyReference.cache
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\obj\Release\net8.0\Library.Service.GeneratedMSBuildEditorConfig.editorconfig
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\obj\Release\net8.0\Library.Service.AssemblyInfoInputs.cache
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\obj\Release\net8.0\Library.Service.AssemblyInfo.cs
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\obj\Release\net8.0\Library.Service.csproj.CoreCompileInputs.cache
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\obj\Release\net8.0\Library..8E6562CF.Up2Date
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\obj\Release\net8.0\Library.Service.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\obj\Release\net8.0\refint\Library.Service.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\obj\Release\net8.0\Library.Service.pdb
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Service\obj\Release\net8.0\ref\Library.Service.dll

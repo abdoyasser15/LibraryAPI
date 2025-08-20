@@ -1,0 +1,12 @@
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\bin\Release\net8.0\Library.Core.deps.json
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\bin\Release\net8.0\Library.Core.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\bin\Release\net8.0\Library.Core.pdb
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\obj\Release\net8.0\Library.Core.csproj.AssemblyReference.cache
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\obj\Release\net8.0\Library.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\obj\Release\net8.0\Library.Core.AssemblyInfoInputs.cache
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\obj\Release\net8.0\Library.Core.AssemblyInfo.cs
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\obj\Release\net8.0\Library.Core.csproj.CoreCompileInputs.cache
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\obj\Release\net8.0\Library.Core.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\obj\Release\net8.0\refint\Library.Core.dll
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\obj\Release\net8.0\Library.Core.pdb
+F:\study\backend\Eng Ahmed Nasr\08 ASP.NET Core Web APIs\LibraTrack.API\Library.Core\obj\Release\net8.0\ref\Library.Core.dll

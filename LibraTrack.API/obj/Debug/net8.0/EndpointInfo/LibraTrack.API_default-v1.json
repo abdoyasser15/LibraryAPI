@@ -1,0 +1,18 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Default APIs",
+    "version": "v1"
+  },
+  "paths": { },
+  "components": {
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "اكتب التوكن هنا بدون Bearer",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

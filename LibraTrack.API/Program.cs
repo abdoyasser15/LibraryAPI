@@ -1,4 +1,4 @@
-using Library.Core;
+﻿using Library.Core;
 using Library.Core.Entities.Identity;
 using Library.Core.ServiceContract;
 using Library.Repository;
@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using StackExchange.Redis;
 using System.Text;
 using System.Threading.Tasks;
 namespace LibraTrack.API
@@ -29,7 +31,6 @@ namespace LibraTrack.API
                 AddNewtonsoftJson();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen(); 
 
             builder.Services.AddDbContext<LibraryContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -37,7 +38,40 @@ namespace LibraTrack.API
             builder.Services.AddDbContext<AppIdentityDbContext>(options=>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection")));
 
-           
+            builder.Services.AddSingleton<IConnectionMultiplexer>((serviceProvider) =>
+            {
+                var connection = builder.Configuration.GetConnectionString("Redis");
+                return ConnectionMultiplexer.Connect(connection);
+            }
+            );
+
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("account-v1", new OpenApiInfo { Title = "Account API", Version = "v1" });
+                c.SwaggerDoc("admin-v1", new OpenApiInfo { Title = "Admin APIs", Version = "v1" });
+                c.SwaggerDoc("public-v1", new OpenApiInfo { Title = "Public APIs", Version = "v1" });
+                c.SwaggerDoc("shared-v1", new OpenApiInfo { Title = "Shared APIs", Version = "v1" });
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Put Bearer Token Here"
+                });
+
+                c.OperationFilter<AuthorizeOperationFilter>();
+
+                c.DocInclusionPredicate((docName, apiDesc) =>
+                {
+                    var group = apiDesc.GroupName;
+                    return string.Equals(group, docName, StringComparison.OrdinalIgnoreCase);
+                });
+            });
+            builder.Services.AddScoped<IResponseCashService, ResponseCashService>();
+
 
             builder.Services.AddApplicationServices();
             builder.Services.AddIdentityServices(builder.Configuration);
@@ -66,19 +100,23 @@ namespace LibraTrack.API
                 var logger = loggerFactory.CreateLogger<Program>();
                 logger.LogError(ex, "An error occurred while migrating the database.");
             }
-
             // Configure the HTTP request pipeline.
             #region Configure Kestrel MiddleWares
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/account-v1/swagger.json", "Account API v1");
+                    c.SwaggerEndpoint("/swagger/admin-v1/swagger.json", "Admin APIs v1");
+                    c.SwaggerEndpoint("/swagger/public-v1/swagger.json", "Public APIs v1");
+                    c.SwaggerEndpoint("/swagger/shared-v1/swagger.json", "Shared APIs v1");
+                });
             }
             app.UseMiddleware<ExceptionMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
